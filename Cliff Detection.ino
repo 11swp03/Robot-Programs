@@ -35,7 +35,7 @@ void loop() {
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
     }
-    else {
+    else if (analogRead(A0) > val) {
         //Right Motors Backward
         digitalWrite(PIN_Motor_AIN_1,LOW);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
