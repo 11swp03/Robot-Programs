@@ -12,7 +12,9 @@ int speed_Min = 64;
 int speed_MidL = 127;
 int speed_MidH = 191;
 int speed_Max = 255;
-
+//Analog Pin and Variable
+int analogPin = A1;
+int val = 40;
 
 void setup() {
     pinMode(PIN_Motor_PWMA, OUTPUT);
