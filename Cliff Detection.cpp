@@ -24,6 +24,23 @@ void setup() {
     pinMode(PIN_Motor_STBY, OUTPUT);
 }
 
+//A Motors are Right
+//B Motors are Left
 void loop() {
-    if 
+    digitalWrite(PIN_Motor_STBY,HIGH);
+
+    if (analogRead(analogPin) <= val) {
+        //Both Motors Forward
+        digitalWrite(PIN_Motor_AIN_1,HIGH);
+        digitalWrite(PIN_Motor_BIN_1,HIGH);
+        analogWrite(PIN_Motor_PWMA,speed_Min);
+        analogWrite(PIN_Motor_PWMB,speed_Min);
+    }
+    else {
+        //Right Motors Backward
+        digitalWrite(PIN_Motor_AIN,LOW);
+        digitalWrite(PIN_Motor_BIN,HIGH);
+        analogWrite(PIN_Motor_PWMA,speed_MidL);
+        analogWrite(PIN_Motor_PWMB,speed_Min);
+    }
 }
