@@ -3,8 +3,8 @@
 #define PIN_Motor_STBY 3
 #define PIN_Motor_PWMA 5
 #define PIN_Motor_PWMB 6
-#define PIN_AIN_1 7
-#define PIN_BIN_1 8
+#define PIN_Motor_AIN_1 7
+#define PIN_Motor_BIN_1 8
 
 //Motor Speed Presets
 int speed_Zero = 0;
