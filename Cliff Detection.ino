@@ -29,6 +29,7 @@ void loop() {
     digitalWrite(PIN_Motor_STBY,HIGH);
 
     if (analogRead(A1) <= val) {
+        //A1 = Middle Sensor
         //Both Motors Forward
         digitalWrite(PIN_Motor_AIN_1,HIGH);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
@@ -36,6 +37,7 @@ void loop() {
         analogWrite(PIN_Motor_PWMB,speed_Min);
     }
     else if (analogRead(A0) > val) {
+        //A0 = Left Sensor
         //Right Motors Backward
         digitalWrite(PIN_Motor_AIN_1,LOW);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
@@ -43,6 +45,7 @@ void loop() {
         analogWrite(PIN_Motor_PWMB,speed_MidL);
     }
     else if (analogRead(A2) > val) {
+        //A2 = Right Sensor
          //Left Motors Backward
         digitalWrite(PIN_Motor_AIN_1,HIGH);
         digitalWrite(PIN_Motor_BIN_1,LOW);
