@@ -13,7 +13,6 @@ int speed_MidL = 127;
 int speed_MidH = 191;
 int speed_Max = 255;
 //Analog Pin and Variable
-int analogPin = A1;
 int val = 40;
 
 void setup() {
@@ -29,7 +28,7 @@ void setup() {
 void loop() {
     digitalWrite(PIN_Motor_STBY,HIGH);
 
-    if (analogRead(analogPin) <= val) {
+    if (analogRead(A1) <= val) {
         //Both Motors Forward
         digitalWrite(PIN_Motor_AIN_1,HIGH);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
