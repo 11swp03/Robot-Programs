@@ -41,6 +41,6 @@ void loop() {
         digitalWrite(PIN_Motor_AIN,LOW);
         digitalWrite(PIN_Motor_BIN,HIGH);
         analogWrite(PIN_Motor_PWMA,speed_MidL);
-        analogWrite(PIN_Motor_PWMB,speed_Min);
+        analogWrite(PIN_Motor_PWMB,speed_MidL);
     }
 }
