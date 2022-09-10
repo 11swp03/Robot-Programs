@@ -38,8 +38,8 @@ void loop() {
     }
     else {
         //Right Motors Backward
-        digitalWrite(PIN_Motor_AIN,LOW);
-        digitalWrite(PIN_Motor_BIN,HIGH);
+        digitalWrite(PIN_Motor_AIN_1,LOW);
+        digitalWrite(PIN_Motor_BIN_1,HIGH);
         analogWrite(PIN_Motor_PWMA,speed_MidL);
         analogWrite(PIN_Motor_PWMB,speed_MidL);
     }
