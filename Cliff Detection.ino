@@ -42,4 +42,11 @@ void loop() {
         analogWrite(PIN_Motor_PWMA,speed_MidL);
         analogWrite(PIN_Motor_PWMB,speed_MidL);
     }
+    else if (analogRead(A2) > val) {
+         //Left Motors Backward
+        digitalWrite(PIN_Motor_AIN_1,HIGH);
+        digitalWrite(PIN_Motor_BIN_1,LOW);
+        analogWrite(PIN_Motor_PWMA,speed_MidL);
+        analogWrite(PIN_Motor_PWMB,speed_MidL);
+    }
 }
