@@ -31,7 +31,7 @@ void setup() {
         digitalWrite(PIN_Motor_BIN_1,HIGH);
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
-        delay(1000);
+        delay(2000);
 
     //Turn Right
          digitalWrite(PIN_Motor_AIN_1,LOW);
