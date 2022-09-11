@@ -15,6 +15,8 @@ int speed_Max = 255;
 //Variable
 int val = 40;
 
+//A Motors are Right
+//B Motors are Left
 void setup() {
     pinMode(PIN_Motor_PWMA, OUTPUT);
     pinMode(PIN_Motor_AIN_1, OUTPUT);
