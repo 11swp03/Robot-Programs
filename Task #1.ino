@@ -29,7 +29,6 @@ void setup() {
     digitalWrite(PIN_Motor_STBY,HIGH);
 
     //Move Forward
-        delay(FDelay);
         digitalWrite(PIN_Motor_AIN_1,HIGH);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
         analogWrite(PIN_Motor_PWMA,speed_Min);
