@@ -48,3 +48,6 @@ void setup() {
         analogWrite(PIN_Motor_PWMB,speed_Min);
         delay(FDelay);
 }
+
+void loop() {
+}
