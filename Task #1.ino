@@ -50,7 +50,5 @@ void setup() {
         delay(FDelay);
         
         pinMode(PIN_Motor_PWMA, OUTPUT);
-
-    void loop() {
-    }
 }
+ void loop () {}
