@@ -87,6 +87,13 @@ void setup() {
         analogWrite(PIN_Motor_PWMB,speed_Min);
         delay(HTDelay2);
         
+    //Move Forward
+        digitalWrite(PIN_Motor_AIN_1,HIGH);
+        digitalWrite(PIN_Motor_BIN_1,HIGH);
+        analogWrite(PIN_Motor_PWMA,speed_Min);
+        analogWrite(PIN_Motor_PWMB,speed_Min);
+        delay(FDelay);
+        
         //Stop Motor
         analogWrite(PIN_Motor_PWMA,speed_Zero);
         analogWrite(PIN_Motor_PWMB,speed_Zero);
