@@ -49,6 +49,8 @@ void setup() {
         analogWrite(PIN_Motor_PWMB,speed_Min);
         delay(FDelay);
         
-        pinMode(PIN_Motor_PWMA, OUTPUT);
+        //Stop Motor
+        digitalWrite(PIN_Motor_STBY,LOW);
+    
 }
  void loop () {}
