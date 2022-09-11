@@ -23,4 +23,8 @@ void setup() {
     pinMode(PIN_Motor_PWMB, OUTPUT);
     pinMode(PIN_Motor_BIN_1, OUTPUT);
     pinMode(PIN_Motor_STBY, OUTPUT);
+
+    digitalWrite(PIN_Motor_STBY,HIGH);
+
+    
 }
