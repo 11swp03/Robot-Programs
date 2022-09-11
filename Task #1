@@ -13,7 +13,6 @@ int speed_MidL = 127;
 int speed_MidH = 191;
 int speed_Max = 255;
 //Variable
-int val = 40;
 
 //A Motors are Right
 //B Motors are Left
