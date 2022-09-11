@@ -13,8 +13,8 @@ const int speed_MidL = 127;
 const int speed_MidH = 191;
 const int speed_Max = 255;
 //Variable
-const int FDelay = 3000;
-const int TDelay = 1050;
+const int FDelay = 3000; //at speed_Min is approx. 2 feet
+const int TDelay = 1050; //at speed_Min is approx. 90 degrees
 
 //A Motors are Right
 //B Motors are Left
