@@ -7,13 +7,13 @@
 #define PIN_Motor_BIN_1 8
 
 //Motor Speed Presets
-int speed_Zero = 0;
-int speed_Min = 64;
-int speed_MidL = 127;
-int speed_MidH = 191;
-int speed_Max = 255;
+const int speed_Zero = 0;
+const int speed_Min = 64;
+const int speed_MidL = 127;
+const int speed_MidH = 191;
+const int speed_Max = 255;
 //Variable
-int val = 40;
+const int val = 40;
 
 void setup() {
     pinMode(PIN_Motor_PWMA, OUTPUT);
