@@ -14,7 +14,7 @@ const int speed_MidH = 191;
 const int speed_Max = 255;
 //Variable
 const int FDelay = 3000;
-const int TDelay = 1100;
+const int TDelay = 1050;
 
 //A Motors are Right
 //B Motors are Left
