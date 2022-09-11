@@ -16,7 +16,7 @@ const int speed_Max = 255;
 const int FDelay = 3000; //at speed_Min is approx. 2 feet
 const int TDelay = 1050; //at speed_Min is approx. 90 degrees
 const int HTDelay1 = 1838; //at speed_Min is approx. 315 degrees
-const int HFDelay = 4243; //at speed_Min is approx. 2.8284
+const int HFDelay = 3675; //at speed_Min is approx. 2.8284
 const int HTDelay2 = 525; //at speed_Min is approx. 45 degrees
 
 //A Motors are Right
@@ -93,7 +93,7 @@ void setup() {
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
         delay(FDelay);
-        
+
         //Stop Motor
         analogWrite(PIN_Motor_PWMA,speed_Zero);
         analogWrite(PIN_Motor_PWMB,speed_Zero);
