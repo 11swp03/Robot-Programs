@@ -20,6 +20,7 @@ const int TDelay = 1000;
 //B Motors are Left
 void setup() {
     pinMode(PIN_Motor_PWMA, OUTPUT);
+    
     pinMode(PIN_Motor_AIN_1, OUTPUT);
     pinMode(PIN_Motor_PWMB, OUTPUT);
     pinMode(PIN_Motor_BIN_1, OUTPUT);
@@ -47,4 +48,6 @@ void setup() {
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
         delay(FDelay);
+        
+        pinMode(PIN_Motor_PWMA, OUTPUT);
 }
