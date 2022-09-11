@@ -50,6 +50,8 @@ void setup() {
         delay(FDelay);
         
         //Stop Motor
+        analogWrite(PIN_Motor_PWMA,speed_Zero);
+        analogWrite(PIN_Motor_PWMB,speed_Zero);
         digitalWrite(PIN_Motor_STBY,LOW);
     
 }
