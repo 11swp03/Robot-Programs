@@ -14,7 +14,7 @@ const int speed_MidH = 191;
 const int speed_Max = 255;
 //Variable
 const int FDelay = 3000;
-const int TDelay = 10000;
+const int TDelay = 2000;
 
 //A Motors are Right
 //B Motors are Left
@@ -29,25 +29,27 @@ void setup() {
     digitalWrite(PIN_Motor_STBY,HIGH);
 
     //Move Forward
+        delay(FDelay);
         digitalWrite(PIN_Motor_AIN_1,HIGH);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
-        delay(FDelay);
 
     //Turn Right
+        delay(TDelay);
         digitalWrite(PIN_Motor_AIN_1,LOW);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
-        delay(TDelay);
+        
 
     //Move Forward
+        delay(FDelay);
         digitalWrite(PIN_Motor_AIN_1,HIGH);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
-        delay(FDelay);
+        
         
         //Stop Motor
         analogWrite(PIN_Motor_PWMA,speed_Zero);
