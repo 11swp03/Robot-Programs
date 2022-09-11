@@ -79,6 +79,13 @@ void setup() {
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
         delay(FDelay);
+    
+    //Turn Left off Hypotenuse
+        digitalWrite(PIN_Motor_AIN_1,HIGH);
+        digitalWrite(PIN_Motor_BIN_1,LOW);
+        analogWrite(PIN_Motor_PWMA,speed_Min);
+        analogWrite(PIN_Motor_PWMB,speed_Min);
+        delay(HTDelay2);
         
         //Stop Motor
         analogWrite(PIN_Motor_PWMA,speed_Zero);
