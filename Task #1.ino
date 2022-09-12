@@ -13,7 +13,7 @@ const int speed_MidL = 127;
 const int speed_MidH = 191;
 const int speed_Max = 255;
 //Variable
-const int FDelay = 3100; //at speed_Min is approx. 2 feet
+const int FDelay = 3000; //at speed_Min is approx. 2 feet
 const int TDelay = 1040; //at speed_Min is approx. 90 degrees
 const int HTDelay1 = 1560; //at speed_Min is approx. 315 degrees
 const int HFDelay = 4243; //at speed_Min is approx. 2.8284
