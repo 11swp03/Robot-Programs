@@ -17,7 +17,7 @@ const int FDelay = 3000; //at speed_Min is approx. 2 feet
 const int TDelay = 1050; //at speed_Min is approx. 90 degrees
 const int HTDelay1 = 1575; //at speed_Min is approx. 315 degrees
 const int HFDelay = 4243; //at speed_Min is approx. 2.8284
-const int HTDelay2 = 520; //at speed_Min is approx. 45 degrees
+const int HTDelay2 = 525; //at speed_Min is approx. 45 degrees
 
 //A Motors are Right
 //B Motors are Left
