@@ -24,6 +24,7 @@ const int HTDelay2 = 480; //at speed_Min is approx. 45 degrees
 
 //A Motors are Right
 //B Motors are Left
+//put code in setup so that it only runs once
 void setup() {
     pinMode(PIN_Motor_PWMA, OUTPUT); 
     
@@ -103,4 +104,5 @@ void setup() {
         digitalWrite(PIN_Motor_STBY,LOW);
     
 }
+//even though no code is in loop, the loop command is still required for syntax
  void loop () {}
