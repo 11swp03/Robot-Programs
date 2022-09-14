@@ -14,6 +14,10 @@ const int speed_MidH = 191;
 const int speed_Max = 255;
 //Variable
 const int val = 40;
+const int Middle_Sensor = A1;
+const int Left_Sensor = A0;
+const int Right_Sensor = A2;
+
 
 void setup() {
     pinMode(PIN_Motor_PWMA, OUTPUT);
@@ -28,7 +32,7 @@ void setup() {
 void loop() {
     digitalWrite(PIN_Motor_STBY,HIGH);
 
-    if (analogRead(A1) <= val) {
+    if (analogRead(Middle_Sensor) <= val) {
         //A1 = Middle Sensor
         //Both Motors Forward
         digitalWrite(PIN_Motor_AIN_1,HIGH);
@@ -36,7 +40,7 @@ void loop() {
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
     }
-    else if (analogRead(A0) > val) {
+    else if (analogRead(Left_Sensor) > val) {
         //A0 = Left Sensor
         //Right Motors Backward
         digitalWrite(PIN_Motor_AIN_1,LOW);
@@ -44,7 +48,7 @@ void loop() {
         analogWrite(PIN_Motor_PWMA,speed_MidL);
         analogWrite(PIN_Motor_PWMB,speed_MidL);
     }
-    else if (analogRead(A2) > val) {
+    else if (analogRead(Right_Sensor) > val) {
         //A2 = Right Sensor
          //Left Motors Backward
         digitalWrite(PIN_Motor_AIN_1,HIGH);
