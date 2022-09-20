@@ -19,7 +19,14 @@ const int FDelay = 1500; //at speed_Min is approx. 1 feet
 const int TDelay = 1050; //at speed_Min is approx. 90 degrees
 
 void setup () {
+pinMode(PIN_Motor_PWMA, OUTPUT); 
+    
+    pinMode(PIN_Motor_AIN_1, OUTPUT);
+    pinMode(PIN_Motor_PWMB, OUTPUT);
+    pinMode(PIN_Motor_BIN_1, OUTPUT);
+    pinMode(PIN_Motor_STBY, OUTPUT);
 
+    digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
 }
 
 void loop () {}
