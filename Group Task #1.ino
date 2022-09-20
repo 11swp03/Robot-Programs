@@ -16,7 +16,7 @@ const int speed_Max = 255; //100% duty load
 
 //sets delay variables making it easier to change them all at once
 const int LTDelay = 950; // left 
-const int RTDelay = 1100; //at speed_Min is approx. 90 degrees
+const int RTDelay = 1200; //at speed_Min is approx. 90 degrees
 
 void setup () {
 pinMode(PIN_Motor_PWMA, OUTPUT); 
