@@ -63,7 +63,10 @@ pinMode(PIN_Motor_PWMA, OUTPUT);
         analogWrite(PIN_Motor_PWMB,speed_Min);
         delay((4 * FDelay));
 
-		
+		//Stop Motor
+        analogWrite(PIN_Motor_PWMA,speed_Zero);
+        analogWrite(PIN_Motor_PWMB,speed_Zero);
+        digitalWrite(PIN_Motor_STBY,LOW);
 }
 
 void loop () {}
