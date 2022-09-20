@@ -61,7 +61,7 @@ pinMode(PIN_Motor_PWMA, OUTPUT);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
-        delay(5750);
+        delay(5800);
 
 		//Stop Motor
         analogWrite(PIN_Motor_PWMA,speed_Zero);
