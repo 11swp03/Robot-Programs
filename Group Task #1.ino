@@ -13,3 +13,7 @@ const int speed_Min = 64; //25% duty load
 const int speed_MidL = 127; //50% duty load
 const int speed_MidH = 191; //75% duty load
 const int speed_Max = 255; //100% duty load
+
+//sets delay variables making it easier to change them all at once
+const int FDelay = 1500; //at speed_Min is approx. 1 feet
+const int TDelay = 1050; //at speed_Min is approx. 90 degrees
