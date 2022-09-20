@@ -41,7 +41,7 @@ pinMode(PIN_Motor_PWMA, OUTPUT);
         digitalWrite(PIN_Motor_BIN_1,HIGH);
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
-        delay(TDelay);
+        delay(RTDelay);
 
         //Move Forward
         digitalWrite(PIN_Motor_AIN_1,HIGH);
@@ -55,7 +55,7 @@ pinMode(PIN_Motor_PWMA, OUTPUT);
         digitalWrite(PIN_Motor_BIN_1,LOW);
         analogWrite(PIN_Motor_PWMA,speed_Min);
         analogWrite(PIN_Motor_PWMB,speed_Min);
-        delay(TDelay);
+        delay(LTDelay);
 
         //Move Forward
         digitalWrite(PIN_Motor_AIN_1,HIGH);
