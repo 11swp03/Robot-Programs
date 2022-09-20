@@ -15,8 +15,7 @@ const int speed_MidH = 191; //75% duty load
 const int speed_Max = 255; //100% duty load
 
 //sets delay variables making it easier to change them all at once
-const int FDelay = 1500; //at speed_Min is approx. 1 feet
-const int LTDelay = 1000; // left 
+const int LTDelay = 9500; // left 
 const int RTDelay = 1100; //at speed_Min is approx. 90 degrees
 
 void setup () {
