@@ -31,11 +31,7 @@ void setup(){
 
 }
 
-void loop{
-   long inches
-   pinMode(Trig, OUTPUT);
-
-   int Distance_test(){
+int Distance_test(){
    digitalWrite(Trig, LOW);
    delayMicroseconds(2);
    digitalWrite(Trig, HIGH);
@@ -46,20 +42,23 @@ void loop{
    return (int)Fdistance;
    }
 
-   middleDistance = Distance_test();
+void loop(){
+   long inches;
+   pinMode(Trig, OUTPUT);
+   int middleDistance = Distance_test();
 
    if (middleDistance <= 9){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,HIGH);
       analogWrite(PIN_Motor_PWMA,speed_Min);
       analogWrite(PIN_Motor_PWMB,speed_Min);
-      delay(FDelay);
+      delay(500);
    }
    else{
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,LOW);
       analogWrite(PIN_Motor_PWMA,speed_Min);
       analogWrite(PIN_Motor_PWMB,speed_Min);
-      delay(TDelay);
+      delay(1050);
    }
 }
