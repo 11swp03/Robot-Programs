@@ -34,5 +34,13 @@ void setup(){
 }
 
 void loop{
+   long inches
+
+   pinMode(Trig, OUTPUT);
+   digitalWrite(Trig, LOW);
+   delayMicroseconds(2);
+   digitalWrite(Trig, HIGH);
+   delayMicroseconds(10);
+   digitalWrite(Trig, LOW);
 
 }
