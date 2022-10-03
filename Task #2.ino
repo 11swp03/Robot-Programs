@@ -38,7 +38,7 @@ int Distance_test(){
    delayMicroseconds(10);
    digitalWrite(Trig, LOW);
    float Fdistance = pulseIn(Echo, HIGH);
-   Fdistance = Fdistance/148;
+   Fdistance = Fdistance/74/2;
    return (int)Fdistance;
    }
 
