@@ -14,3 +14,25 @@ const int speed_Min = 64; //25% duty load
 const int speed_MidL = 127; //50% duty load
 const int speed_MidH = 191; //75% duty load
 const int speed_Max = 255; //100% duty load
+//Ultrasonic Sensor Presets
+const int Echo = 12;
+const int Trig = 13;
+
+void setup(){
+    pinMode(PIN_Motor_PWMA, OUTPUT);
+
+    pinMode(PIN_Motor_AIN_1, OUTPUT);
+    pinMode(PIN_Motor_PWMB, OUTPUT);
+    pinMode(PIN_Motor_BIN_1, OUTPUT);
+    pinMode(PIN_Motor_STBY, OUTPUT);
+
+    digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
+
+    int Distance_test(){
+      digitalWrite(Trig)
+    }
+}
+
+void loop{
+
+}
