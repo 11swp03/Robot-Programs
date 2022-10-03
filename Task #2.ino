@@ -28,19 +28,21 @@ void setup(){
 
     digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
 
-    int Distance_test(){
-      digitalWrite(Trig)
-    }
+
 }
 
 void loop{
    long inches
-
    pinMode(Trig, OUTPUT);
+
+   int Distance_test(){
    digitalWrite(Trig, LOW);
    delayMicroseconds(2);
    digitalWrite(Trig, HIGH);
    delayMicroseconds(10);
    digitalWrite(Trig, LOW);
-
+   float Fdistance = pulseIn(Echo, HIGH);
+   Fdistance = Fdistance/148;
+   return (int)Fdistance;
+   }
 }
