@@ -56,6 +56,10 @@ void loop{
       delay(FDelay);
    }
    else{
-
+      digitalWrite(PIN_Motor_AIN_1,HIGH);
+      digitalWrite(PIN_Motor_BIN_1,LOW);
+      analogWrite(PIN_Motor_PWMA,speed_Min);
+      analogWrite(PIN_Motor_PWMB,speed_Min);
+      delay(TDelay);
    }
 }
