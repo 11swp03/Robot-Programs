@@ -44,5 +44,9 @@ void loop{
    float Fdistance = pulseIn(Echo, HIGH);
    Fdistance = Fdistance/148;
    return (int)Fdistance;
+
+   middleDistance = Distance_test();
+
+
    }
 }
