@@ -51,6 +51,8 @@ void loop(){
 
    //moves forward if distance from object is greater than 9"
    Serial.print(middleDistance);
+   Serial.println();
+   delay(100);
 
    // if (middleDistance >= 9){
    //    digitalWrite(PIN_Motor_AIN_1,HIGH);
