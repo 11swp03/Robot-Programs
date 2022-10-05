@@ -47,7 +47,7 @@ void loop(){
    pinMode(Echo, INPUT);
 
    // moves forward if distance from object is greater than 9"
-   if (FDistance >= 9){
+   if (Fdistance >= 9){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,HIGH);
       analogWrite(PIN_Motor_PWMA,speed_Min);
