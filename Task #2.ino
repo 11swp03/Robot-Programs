@@ -31,6 +31,7 @@ void setup(){
 
 }
 
+//Sub-routine to test distance from object
 int Distance_test(){
    digitalWrite(Trig, LOW);
    delayMicroseconds(2);
@@ -38,15 +39,16 @@ int Distance_test(){
    delayMicroseconds(10);
    digitalWrite(Trig, LOW);
    float Fdistance = pulseIn(Echo, HIGH);
-   Fdistance = Fdistance/148+100;
+   Fdistance = Fdistance/148+100;//converts time delay to distance
    return (int)Fdistance;
    }
 
 void loop(){
-   long inches;
-   pinMode(Trig, OUTPUT);
-   int middleDistance = Distance_test();
+   long inches; //make floating point variable to hold distance
+   pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
+   int middleDistance = Distance_test();//runs distance test sub-routine
 
+   //moves forward if distance from object is greater than 9"
    if (middleDistance >= 9){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,HIGH);
@@ -54,6 +56,7 @@ void loop(){
       analogWrite(PIN_Motor_PWMB,speed_Min);
       delay(500);
    }
+   //Turns right otherwise
    else{
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,LOW);
