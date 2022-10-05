@@ -27,8 +27,6 @@ void setup(){
     pinMode(PIN_Motor_STBY, OUTPUT);
 
     digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
-Serial.begin(9600);
-
 }
 
 //Sub-routine to test distance from object
@@ -49,24 +47,20 @@ void loop(){
    pinMode(Echo, INPUT);
    int middleDistance = Distance_test();//runs distance test sub-routine
 
-   //moves forward if distance from object is greater than 9"
-   Serial.print(middleDistance);
-   Serial.println();
-   delay(100);
-
-   // if (middleDistance >= 9){
-   //    digitalWrite(PIN_Motor_AIN_1,HIGH);
-   //    digitalWrite(PIN_Motor_BIN_1,HIGH);
-   //    analogWrite(PIN_Motor_PWMA,speed_Min);
-   //    analogWrite(PIN_Motor_PWMB,speed_Min);
-   //    delay(50);
-   // }
-   // //Turns right otherwise
-   // else{
-   //    digitalWrite(PIN_Motor_AIN_1,HIGH);
-   //    digitalWrite(PIN_Motor_BIN_1,LOW);
-   //    analogWrite(PIN_Motor_PWMA,speed_Min);
-   //    analogWrite(PIN_Motor_PWMB,speed_Min);
-   //    delay(1050);
-   // }
+   // moves forward if distance from object is greater than 9"
+   if (middleDistance >= 9){
+      digitalWrite(PIN_Motor_AIN_1,HIGH);
+      digitalWrite(PIN_Motor_BIN_1,HIGH);
+      analogWrite(PIN_Motor_PWMA,speed_Min);
+      analogWrite(PIN_Motor_PWMB,speed_Min);
+      delay(50);
+   }
+   //Turns right otherwise
+   else{
+      digitalWrite(PIN_Motor_AIN_1,HIGH);
+      digitalWrite(PIN_Motor_BIN_1,LOW);
+      analogWrite(PIN_Motor_PWMA,speed_Min);
+      analogWrite(PIN_Motor_PWMB,speed_Min);
+      delay(1050);
+   }
 }
