@@ -45,10 +45,9 @@ void loop(){
    long inches; //make floating point variable to hold distance
    pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
    pinMode(Echo, INPUT);
-   int middleDistance = Distance_test();//runs distance test sub-routine
 
    // moves forward if distance from object is greater than 9"
-   if (middleDistance >= 9){
+   if (FDistance >= 9){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,HIGH);
       analogWrite(PIN_Motor_PWMA,speed_Min);
