@@ -54,19 +54,19 @@ Serial.print(middleDistance);
    Serial.println();
    delay(100);
 
-   // if (middleDistance >= 9){
-   //    digitalWrite(PIN_Motor_AIN_1,HIGH);
-   //    digitalWrite(PIN_Motor_BIN_1,HIGH);
-   //    analogWrite(PIN_Motor_PWMA,speed_Min);
-   //    analogWrite(PIN_Motor_PWMB,speed_Min);
-   //    delay(50);
-   // }
-   // //Turns right otherwise
-   // else{
-   //    digitalWrite(PIN_Motor_AIN_1,HIGH);
-   //    digitalWrite(PIN_Motor_BIN_1,LOW);
-   //    analogWrite(PIN_Motor_PWMA,speed_Min);
-   //    analogWrite(PIN_Motor_PWMB,speed_Min);
-   //    delay(1050);
-   // }
+   if (middleDistance >= 9){
+      digitalWrite(PIN_Motor_AIN_1,HIGH);
+      digitalWrite(PIN_Motor_BIN_1,HIGH);
+      analogWrite(PIN_Motor_PWMA,speed_Min);
+      analogWrite(PIN_Motor_PWMB,speed_Min);
+      delay(50);
+   }
+   //Turns right otherwise
+   else{
+      digitalWrite(PIN_Motor_AIN_1,HIGH);
+      digitalWrite(PIN_Motor_BIN_1,LOW);
+      analogWrite(PIN_Motor_PWMA,speed_Min);
+      analogWrite(PIN_Motor_PWMB,speed_Min);
+      delay(1050);
+   }
 }
