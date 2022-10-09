@@ -48,7 +48,7 @@ void loop(){
    pinMode(Echo, INPUT);
    int middleDistance = Distance_test();//runs distance test sub-routine
 
-   // moves forward if distance from object is greater than 9"
+   // moves forward if distance from object is greater than 8"
    if (middleDistance >= 8){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,HIGH);
@@ -56,12 +56,11 @@ void loop(){
       analogWrite(PIN_Motor_PWMB,speed_Min);
       delay(50);
    }
-   //Turns right otherwise
+   //Slows down otherwise
    else{
       digitalWrite(PIN_Motor_AIN_1,HIGH);
-      digitalWrite(PIN_Motor_BIN_1,LOW);
+      digitalWrite(PIN_Motor_BIN_1,HIGH);
       analogWrite(PIN_Motor_PWMA,speed_Min);
       analogWrite(PIN_Motor_PWMB,speed_Min);
-      delay(1050);
    }
 }
