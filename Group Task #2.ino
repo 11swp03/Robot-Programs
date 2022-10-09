@@ -49,7 +49,7 @@ void loop(){
    int middleDistance = Distance_test();//runs distance test sub-routine
 
    // moves forward if distance from object is greater than 9"
-   if (middleDistance >= 9){
+   if (middleDistance >= 8){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,HIGH);
       analogWrite(PIN_Motor_PWMA,speed_Min);
