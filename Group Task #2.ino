@@ -68,19 +68,19 @@ void loop(){
 
    // moves forward if distance from object is greater than 8"
    if (middleDistance >= 8){
-      if (LT_M > 200){
+      if (LT_M > 100){
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,speed_MidH);
          analogWrite(PIN_Motor_PWMB,speed_MidH);
       }
-      else if (LT_R > 200){
+      else if (LT_R > 100){
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,speed_Min);
          analogWrite(PIN_Motor_PWMB,speed_MidH);
       }
-      else if (LT_L > 200) {
+      else if (LT_L > 100) {
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,speed_MidH);
