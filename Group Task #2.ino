@@ -18,9 +18,9 @@ const int speed_Max = 255; //100% duty load
 const int Echo = 12;
 const int Trig = 13;
 //Line Sensor Presets
-//Left sensor is broke on my robot so I don't add it to code
 const int LT_R = digitalRead(A0);
 const int LT_M = digitalRead(A1);
+const int LT_L = digitalRead(A2);
 
 void setup(){
     pinMode(PIN_Motor_PWMA, OUTPUT);
@@ -54,19 +54,19 @@ void loop(){
 
    // moves forward if distance from object is greater than 8"
    if (middleDistance >= 8){
-      if (LT_M == 1){
+      if (LT_M == 0){
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,speed_MidH);
          analogWrite(PIN_Motor_PWMB,speed_MidH);
       }
-      else if (LT_R == 1){
+      else if (LT_R == 0){
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,speed_MidL);
          analogWrite(PIN_Motor_PWMB,speed_MidH);
       }
-      else {
+      else if (LT_L == 0) {
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,speed_MidH);
