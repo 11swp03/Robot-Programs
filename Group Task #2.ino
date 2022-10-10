@@ -77,14 +77,14 @@ void loop(){
       else if (LT_R > 200){
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_MidL);
+         analogWrite(PIN_Motor_PWMA,speed_Min);
          analogWrite(PIN_Motor_PWMB,speed_MidH);
       }
       else if (LT_L > 200) {
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,speed_MidH);
-         analogWrite(PIN_Motor_PWMB,speed_MidL);
+         analogWrite(PIN_Motor_PWMB,speed_Min);
       }
    }
    //Slows down otherwise
