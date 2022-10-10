@@ -18,9 +18,9 @@ const int speed_Max = 255; //100% duty load
 const int Echo = 12;
 const int Trig = 13;
 //Line Sensor Presets
-const int LT_R = analogRead(A0);
-const int LT_M = analogRead(A1);
-const int LT_L = analogRead(A2);
+#define LT_R analogRead(A0)
+#define LT_M analogRead(A1)
+#define LT_L analogRead(A2)
 
 void setup(){
     pinMode(PIN_Motor_PWMA, OUTPUT);
@@ -42,7 +42,7 @@ int Distance_test(){
    digitalWrite(Trig, HIGH);
    delayMicroseconds(10);
    digitalWrite(Trig, LOW);
-   float Fdistance = pulseIn(Echo, HIGH);
+   long Fdistance = pulseIn(Echo, HIGH);
    Fdistance = Fdistance/148;//converts time delay to distance
    return (int)Fdistance;
    }
