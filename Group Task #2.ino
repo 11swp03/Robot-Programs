@@ -18,9 +18,9 @@ const int speed_Max = 255; //100% duty load
 const int Echo = 12;
 const int Trig = 13;
 //Line Sensor Presets
-int LT_R = analogRead(A0);
-int LT_M = analogRead(A1);
-int LT_L = analogRead(A2);
+#define LT_R analogRead(A0)
+#define LT_M analogRead(A1)
+#define LT_L analogRead(A2)
 
 void setup(){
     pinMode(PIN_Motor_PWMA, OUTPUT);
