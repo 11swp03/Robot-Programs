@@ -67,31 +67,31 @@ void loop(){
   delay(100);
 
    // moves forward if distance from object is greater than 8"
-   if (middleDistance >= 8){
-      if (LT_M > 200){
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_MidH);
-         analogWrite(PIN_Motor_PWMB,speed_MidH);
-      }
-      else if (LT_R > 200){
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_MidL);
-         analogWrite(PIN_Motor_PWMB,speed_MidH);
-      }
-      else if (LT_L > 200) {
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_MidH);
-         analogWrite(PIN_Motor_PWMB,speed_MidL);
-      }
-   }
+   // if (middleDistance >= 8){
+   //    if (LT_M > 200){
+   //       digitalWrite(PIN_Motor_AIN_1,HIGH);
+   //       digitalWrite(PIN_Motor_BIN_1,HIGH);
+   //       analogWrite(PIN_Motor_PWMA,speed_MidH);
+   //       analogWrite(PIN_Motor_PWMB,speed_MidH);
+   //    }
+   //    else if (LT_R > 200){
+   //       digitalWrite(PIN_Motor_AIN_1,HIGH);
+   //       digitalWrite(PIN_Motor_BIN_1,HIGH);
+   //       analogWrite(PIN_Motor_PWMA,speed_MidL);
+   //       analogWrite(PIN_Motor_PWMB,speed_MidH);
+   //    }
+   //    else if (LT_L > 200) {
+   //       digitalWrite(PIN_Motor_AIN_1,HIGH);
+   //       digitalWrite(PIN_Motor_BIN_1,HIGH);
+   //       analogWrite(PIN_Motor_PWMA,speed_MidH);
+   //       analogWrite(PIN_Motor_PWMB,speed_MidL);
+   //    }
+   // }
    //Slows down otherwise
    else{
-      digitalWrite(PIN_Motor_AIN_1,HIGH);
-      digitalWrite(PIN_Motor_BIN_1,HIGH);
-      analogWrite(PIN_Motor_PWMA,speed_Min);
-      analogWrite(PIN_Motor_PWMB,speed_Min);
-   }
+   //    digitalWrite(PIN_Motor_AIN_1,HIGH);
+   //    digitalWrite(PIN_Motor_BIN_1,HIGH);
+   //    analogWrite(PIN_Motor_PWMA,speed_Min);
+   //    analogWrite(PIN_Motor_PWMB,speed_Min);
+   // }
 }
