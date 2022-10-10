@@ -77,23 +77,9 @@ void loop(){
    }
    //Slows down otherwise
    else{
-   if (LT_M > 100){
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_Min);
-         analogWrite(PIN_Motor_PWMB,speed_Min);
-      }
-      else if (LT_R > 100){
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_Low);
-         analogWrite(PIN_Motor_PWMB,speed_MidL);
-      }
-      else if (LT_L > 100) {
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_MidL);
-         analogWrite(PIN_Motor_PWMB,speed_Low);
-      }
+      digitalWrite(PIN_Motor_AIN_1,HIGH);
+      digitalWrite(PIN_Motor_BIN_1,HIGH);
+      analogWrite(PIN_Motor_PWMA,speed_Zero);
+      analogWrite(PIN_Motor_PWMB,speed_Zero);
    }
 }
