@@ -31,8 +31,6 @@ void setup(){
     pinMode(PIN_Motor_STBY, OUTPUT);
 
     digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
-
-    Serial.begin(9600);
 }
 
 //Sub-routine to test distance from object
@@ -53,18 +51,6 @@ void loop(){
    pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
    pinMode(Echo, INPUT);
    int middleDistance = Distance_test();//runs distance test sub-routine
-
-   Serial.print(inches);
-  Serial.print(" in, ");
-  Serial.print("LT_R = ");
-  Serial.print(LT_R);
-  Serial.print(", LT_M = ");
-  Serial.print(LT_M);
-  Serial.print(", LT_L = ");
-  Serial.println(LT_L);
-  Serial.println();
-
-  delay(100);
 
    // moves forward if distance from object is greater than 8"
    if (middleDistance >= 8){
