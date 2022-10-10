@@ -10,7 +10,6 @@
 //Motor Speed Presets
 //sets motor speed variables
 const int speed_Zero = 0; //0% duty load
-const int speed_Low = 30; //0% duty load
 const int speed_Min = 64; //25% duty load
 const int speed_MidL = 127; //50% duty load
 const int speed_MidH = 191; //75% duty load
