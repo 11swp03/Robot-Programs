@@ -52,6 +52,7 @@ void loop(){
    pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
    pinMode(Echo, INPUT);
    int middleDistance = Distance_test();//runs distance test sub-routine
+   middleDistance += 3;
 
    // moves forward if distance from object is greater than 8"
    if (middleDistance >= 8){
