@@ -79,7 +79,7 @@ void loop(){
       else {
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_MidL);
+         analogWrite(PIN_Motor_PWMA,speed_MidH);
          analogWrite(PIN_Motor_PWMB,speed_Low);
       }
    }
