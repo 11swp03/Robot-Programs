@@ -10,6 +10,7 @@
 //Motor Speed Presets
 //sets motor speed variables
 const int speed_Zero = 0; //0% duty load
+const int speed_Low = 33;
 const int speed_Min = 64; //25% duty load
 const int speed_MidL = 127; //50% duty load
 const int speed_MidH = 191; //75% duty load
@@ -64,14 +65,14 @@ void loop(){
       else if (LT_R > 100){
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_Min);
-         analogWrite(PIN_Motor_PWMB,speed_MidH);
+         analogWrite(PIN_Motor_PWMA,speed_Low);
+         analogWrite(PIN_Motor_PWMB,speed_MidL);
       }
       else if (LT_L > 100) {
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,speed_MidH);
-         analogWrite(PIN_Motor_PWMB,speed_Min);
+         analogWrite(PIN_Motor_PWMA,speed_MidL);
+         analogWrite(PIN_Motor_PWMB,speed_Low);
       }
    }
    //Slows down otherwise
