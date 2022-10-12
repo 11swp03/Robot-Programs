@@ -76,6 +76,12 @@ void loop(){
          analogWrite(PIN_Motor_PWMB,speed_Low);
          delay(200);
       }
+      else {
+         digitalWrite(PIN_Motor_AIN_1,HIGH);
+         digitalWrite(PIN_Motor_BIN_1,HIGH);
+         analogWrite(PIN_Motor_PWMA,speed_MidL);
+         analogWrite(PIN_Motor_PWMB,speed_Low);
+      }
    }
    //Slows down otherwise
    else{
