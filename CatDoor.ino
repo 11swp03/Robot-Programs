@@ -7,14 +7,6 @@
 #define PIN_Motor_AIN_1 7
 #define PIN_Motor_BIN_1 8
 
-//Motor Speed Presets
-//sets motor speed variables
-const int speed_Zero = 0; //0% duty load
-const int speed_Low = 33;
-const int speed_Min = 64; //25% duty load
-const int speed_MidL = 127; //50% duty load
-const int speed_MidH = 191; //75% duty load
-const int speed_Max = 255; //100% duty load
 //Ultrasonic Sensor Presets
 const int Echo = 12;
 const int Trig = 13;
@@ -53,14 +45,14 @@ void loop(){
    if (middleDistance >= 10){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,LOW);
-      analogWrite(PIN_Motor_PWMA,speed_MidH);
-      analogWrite(PIN_Motor_PWMB,speed_MidH);
+      analogWrite(PIN_Motor_PWMA,127);
+      analogWrite(PIN_Motor_PWMB,127);
    }
    //opens door otherwise
    else{
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,LOW);
-      analogWrite(PIN_Motor_PWMA,speed_MidH);
-      analogWrite(PIN_Motor_PWMB,speed_MidH);
+      analogWrite(PIN_Motor_PWMA,127);
+      analogWrite(PIN_Motor_PWMB,127);
    }
 }
