@@ -18,10 +18,6 @@ const int speed_Max = 255; //100% duty load
 //Ultrasonic Sensor Presets
 const int Echo = 12;
 const int Trig = 13;
-//Line Sensor Presets
-#define LT_R analogRead(A0)
-#define LT_M analogRead(A1)
-#define LT_L analogRead(A2)
 
 void setup(){
     pinMode(PIN_Motor_PWMA, OUTPUT);
