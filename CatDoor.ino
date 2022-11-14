@@ -49,18 +49,18 @@ void loop(){
    pinMode(Echo, INPUT);
    int middleDistance = Distance_test();//runs distance test sub-routine
 
-   // moves forward if distance from object is greater than 8"
+   //closes door if distance from object is greater than 8"
    if (middleDistance >= 10){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
-      digitalWrite(PIN_Motor_BIN_1,HIGH);
+      digitalWrite(PIN_Motor_BIN_1,LOW);
       analogWrite(PIN_Motor_PWMA,speed_MidH);
-      analogWrite(PIN_Motor_PWMB,speed_Low);
+      analogWrite(PIN_Motor_PWMB,speed_MidH);
    }
-   //Slows down otherwise
+   //opens door otherwise
    else{
       digitalWrite(PIN_Motor_AIN_1,HIGH);
-      digitalWrite(PIN_Motor_BIN_1,HIGH);
-      analogWrite(PIN_Motor_PWMA,speed_Zero);
-      analogWrite(PIN_Motor_PWMB,speed_Zero);
+      digitalWrite(PIN_Motor_BIN_1,LOW);
+      analogWrite(PIN_Motor_PWMA,speed_MidH);
+      analogWrite(PIN_Motor_PWMB,speed_MidH);
    }
 }
