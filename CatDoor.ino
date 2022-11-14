@@ -6,20 +6,22 @@
 #define PIN_Motor_PWMB 6
 #define PIN_Motor_AIN_1 7
 #define PIN_Motor_BIN_1 8
+#define button 10
 
 //Ultrasonic Sensor Presets
 const int Echo = 12;
 const int Trig = 13;
 
 void setup(){
-    pinMode(PIN_Motor_PWMA, OUTPUT);
+   Serial.begin(9600);
 
-    pinMode(PIN_Motor_AIN_1, OUTPUT);
-    pinMode(PIN_Motor_PWMB, OUTPUT);
-    pinMode(PIN_Motor_BIN_1, OUTPUT);
-    pinMode(PIN_Motor_STBY, OUTPUT);
+   pinMode(PIN_Motor_PWMA, OUTPUT);
+   pinMode(PIN_Motor_AIN_1, OUTPUT);
+   pinMode(PIN_Motor_PWMB, OUTPUT);
+   pinMode(PIN_Motor_BIN_1, OUTPUT);
+   pinMode(PIN_Motor_STBY, OUTPUT);
 
-    digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
+   digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
 }
 
 //Sub-routine to test distance from object
@@ -55,4 +57,5 @@ void loop(){
       analogWrite(PIN_Motor_PWMA,127);
       analogWrite(PIN_Motor_PWMB,127);
    }
+   Serial.print(button);
 }
