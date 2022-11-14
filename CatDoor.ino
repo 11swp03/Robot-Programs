@@ -6,7 +6,9 @@
 #define PIN_Motor_PWMB 6
 #define PIN_Motor_AIN_1 7
 #define PIN_Motor_BIN_1 8
-#define button 10
+const int BUTON = 10;
+int ButtonState = 0;
+int Flag = 0;
 
 //Ultrasonic Sensor Presets
 const int Echo = 12;
