@@ -7,7 +7,7 @@
 #define PIN_Motor_AIN_1 7
 #define PIN_Motor_BIN_1 8
 const int BUTON = 10;
-int ButtonState = 0;
+//int ButtonState = 0;
 int Flag = 0;
 
 //Ultrasonic Sensor Presets
@@ -44,6 +44,8 @@ void loop(){
    pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
    pinMode(Echo, INPUT);
    int middleDistance = Distance_test();//runs distance test sub-routine
+   ButtonState = digitalRead(BUTON);
+
 
    //closes door if distance from object is greater than 8"
    if (middleDistance >= 10){
