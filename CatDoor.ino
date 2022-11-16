@@ -14,6 +14,8 @@ int Flag = 0;
 const int Echo = 12;
 const int Trig = 13;
 
+int ButtonState = digitalRead(buttonPin);
+
 void setup(){
    Serial.begin(9600);
 
@@ -40,7 +42,6 @@ int Distance_test(){
 
 
 void loop(){
-   ButtonState = digitalRead(BUTTON);
    long inches; //make floating point variable to hold distance
    pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
    pinMode(Echo, INPUT);
