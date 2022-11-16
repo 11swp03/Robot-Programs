@@ -14,7 +14,7 @@ int Flag = 0;
 const int Echo = 12;
 const int Trig = 13;
 
-int ButtonState = digitalRead(buttonPin);
+int ButtonState = digitalRead(BUTTON);
 
 void setup(){
    Serial.begin(9600);
