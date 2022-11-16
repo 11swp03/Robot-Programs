@@ -47,7 +47,7 @@ void loop(){
    ButtonState = digitalRead(BUTON);
 
 
-   //closes door if distance from object is greater than 8"
+   //closes door if distance from cat is greater than 8"
    if (middleDistance >= 10){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       digitalWrite(PIN_Motor_BIN_1,LOW);
