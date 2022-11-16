@@ -69,5 +69,5 @@ void loop(){
          analogWrite(PIN_Motor_PWMB,127);
       }
    }
-   Serial.print(button);
+   Serial.print(Flag);
 }
