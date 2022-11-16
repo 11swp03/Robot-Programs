@@ -46,6 +46,12 @@ void loop(){
    int middleDistance = Distance_test();//runs distance test sub-routine
    ButtonState = digitalRead(BUTON);
 
+   if (ButtonState == HIGH && Flag == 0){
+      Flag = 1;
+   }
+   else if (ButtonState == HIGH && Flag == 1){
+      Flag = 0;
+   }
 
    //closes door if distance from cat is greater than 8"
    if (middleDistance >= 10){
