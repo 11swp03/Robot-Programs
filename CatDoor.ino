@@ -6,13 +6,15 @@
 #define PIN_Motor_PWMB 6
 #define PIN_Motor_AIN_1 7
 #define PIN_Motor_BIN_1 8
-const int BUTON = 10;
+const int BUTTON = 10;
 //int ButtonState = 0;
 int Flag = 0;
 
 //Ultrasonic Sensor Presets
 const int Echo = 12;
 const int Trig = 13;
+
+ButtonState = digitalRead(BUTTON);
 
 void setup(){
    Serial.begin(9600);
@@ -44,7 +46,7 @@ void loop(){
    pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
    pinMode(Echo, INPUT);
    int middleDistance = Distance_test();//runs distance test sub-routine
-   ButtonState = digitalRead(BUTON);
+
 
    if (ButtonState == HIGH && Flag == 0){
       Flag = 1;
