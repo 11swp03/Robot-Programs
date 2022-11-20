@@ -50,10 +50,10 @@ void loop(){
    pinMode(BUTTON, INPUT);
 
 
-   if (ButtonState == HIGH && Flag == 0){
+   if (ButtonState == 0 && Flag == 0){
       Flag = 1;
    }
-   else if (ButtonState == HIGH && Flag == 1){
+   else if (ButtonState == 0 && Flag == 1){
       Flag = 0;
    }
 
@@ -73,5 +73,5 @@ void loop(){
          analogWrite(PIN_Motor_PWMB,127);
       }
    }
-   Serial.print(ButtonState);
+   Serial.print(Flag);
 }
