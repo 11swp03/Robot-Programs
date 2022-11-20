@@ -3,28 +3,23 @@
 //defines which pins do what
 #define PIN_Motor_STBY 3
 #define PIN_Motor_PWMA 5
-#define PIN_Motor_PWMB 6
+#define Light1 6
 #define PIN_Motor_AIN_1 7
-#define PIN_Motor_BIN_1 8
+#define LightO 11
 #define BUTTON 10
-//int ButtonState = 0;
-int Flag = 0;
 
 //Ultrasonic Sensor Presets
 const int Echo = 12;
 const int Trig = 13;
 
-//int ButtonState = digitalRead(BUTTON);
+int Flag = 0;
 
 void setup(){
-   Serial.begin(9600);
-
    pinMode(PIN_Motor_PWMA, OUTPUT);
    pinMode(PIN_Motor_AIN_1, OUTPUT);
-   pinMode(PIN_Motor_PWMB, OUTPUT);
-   pinMode(PIN_Motor_BIN_1, OUTPUT);
+   pinMode(Light1, OUTPUT);
+   pinMode(LightO, OUTPUT);
    pinMode(PIN_Motor_STBY, OUTPUT);
-
    digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
 }
 
@@ -58,27 +53,28 @@ void loop(){
    }
 
    if (Flag == 1){
-      //closes door if distance from cat is greater than 8"
-      // if (middleDistance >= 10){
-      //    digitalWrite(PIN_Motor_AIN_1,HIGH);
-      //    digitalWrite(PIN_Motor_BIN_1,LOW);
-      //    analogWrite(PIN_Motor_PWMA,127);
-      //    analogWrite(PIN_Motor_PWMB,127);
-      // }
-      //opens door otherwise
-      // else{
-      //    digitalWrite(PIN_Motor_AIN_1,HIGH);
-      //    digitalWrite(PIN_Motor_BIN_1,LOW);
-      //    analogWrite(PIN_Motor_PWMA,127);
-      //    analogWrite(PIN_Motor_PWMB,127);
-      // }
-      digitalWrite(PIN_Motor_AIN_1,HIGH);
-      analogWrite(PIN_Motor_PWMA,127);
+      digitalWrite(LightO, HIGH);
+      digitalWrite(Light1, LOW);
+      // closes door if distance from cat is greater than 8"
+      if (middleDistance >= 10){
+         digitalWrite(PIN_Motor_AIN_1,HIGH);
+         digitalWrite(PIN_Motor_BIN_1,LOW);
+         analogWrite(PIN_Motor_PWMA,127);
+         analogWrite(PIN_Motor_PWMB,127);
+      }
+      // opens door otherwise
+      else{
+         digitalWrite(PIN_Motor_AIN_1,HIGH);
+         digitalWrite(PIN_Motor_BIN_1,LOW);
+         analogWrite(PIN_Motor_PWMA,127);
+         analogWrite(PIN_Motor_PWMB,127);
+      }
    }
    else {
-      digitalWrite(PIN_Motor_AIN_1,HIGH);
+      digitalWrite(PIN_Motor_AIN_1,LOW);
       analogWrite(PIN_Motor_PWMA,0);
-   }
-   Serial.print(Flag);
+      digitalWrite(Light1, HIGH);
+      digitalWrite(LightO, LOW);
 
+   }
 }
