@@ -75,6 +75,10 @@ void loop(){
       digitalWrite(PIN_Motor_AIN_1,HIGH);
       analogWrite(PIN_Motor_PWMA,127);
    }
+   else {
+      digitalWrite(PIN_Motor_AIN_1,HIGH);
+      analogWrite(PIN_Motor_PWMA,0);
+   }
    Serial.print(Flag);
 
 }
