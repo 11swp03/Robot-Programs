@@ -6,7 +6,7 @@
 #define PIN_Motor_PWMB 6
 #define PIN_Motor_AIN_1 7
 #define PIN_Motor_BIN_1 8
-const int BUTTON = 10;
+#define BUTTON 10
 //int ButtonState = 0;
 int Flag = 0;
 
@@ -14,7 +14,7 @@ int Flag = 0;
 const int Echo = 12;
 const int Trig = 13;
 
-int ButtonState = digitalRead(BUTTON);
+//int ButtonState = digitalRead(BUTTON);
 
 void setup(){
    Serial.begin(9600);
@@ -46,6 +46,8 @@ void loop(){
    pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
    pinMode(Echo, INPUT);
    int middleDistance = Distance_test();//runs distance test sub-routine
+   int ButtonState = digitalRead(BUTTON);
+   pinMode(BUTTON, INPUT);
 
 
    if (ButtonState == HIGH && Flag == 0){
@@ -71,5 +73,5 @@ void loop(){
          analogWrite(PIN_Motor_PWMB,127);
       }
    }
-   Serial.print(Flag);
+   Serial.print(ButtonState);
 }
