@@ -59,19 +59,22 @@ void loop(){
 
    if (Flag == 1){
       //closes door if distance from cat is greater than 8"
-      if (middleDistance >= 10){
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,LOW);
-         analogWrite(PIN_Motor_PWMA,127);
-         analogWrite(PIN_Motor_PWMB,127);
-      }
+      // if (middleDistance >= 10){
+      //    digitalWrite(PIN_Motor_AIN_1,HIGH);
+      //    digitalWrite(PIN_Motor_BIN_1,LOW);
+      //    analogWrite(PIN_Motor_PWMA,127);
+      //    analogWrite(PIN_Motor_PWMB,127);
+      // }
       //opens door otherwise
-      else{
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,LOW);
-         analogWrite(PIN_Motor_PWMA,127);
-         analogWrite(PIN_Motor_PWMB,127);
-      }
+      // else{
+      //    digitalWrite(PIN_Motor_AIN_1,HIGH);
+      //    digitalWrite(PIN_Motor_BIN_1,LOW);
+      //    analogWrite(PIN_Motor_PWMA,127);
+      //    analogWrite(PIN_Motor_PWMB,127);
+      // }
+      digitalWrite(PIN_Motor_AIN_1,HIGH);
+      analogWrite(PIN_Motor_PWMA,127);
    }
    Serial.print(Flag);
+
 }
