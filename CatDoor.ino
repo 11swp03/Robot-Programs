@@ -15,6 +15,8 @@ const int Trig = 13;
 int Flag = 0;
 
 void setup(){
+   Serial.begin(9600);
+
    pinMode(PIN_Motor_PWMA, OUTPUT);
    pinMode(PIN_Motor_AIN_1, OUTPUT);
    pinMode(Light1, OUTPUT);
@@ -75,4 +77,5 @@ void loop(){
       digitalWrite(LightO, LOW);
 
    }
+   Serial.print(Fdistance);
 }
