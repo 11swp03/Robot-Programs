@@ -38,6 +38,7 @@ int Distance_test(){
 
 void loop(){
    //move declarations out of the loop
+
    long inches; //make floating point variable to hold distance
    pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
    pinMode(Echo, INPUT);
@@ -59,16 +60,12 @@ void loop(){
       // closes door if distance from cat is greater than 8"
       if (middleDistance >= 10){
          digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,LOW);
          analogWrite(PIN_Motor_PWMA,127);
-         analogWrite(PIN_Motor_PWMB,127);
       }
       // opens door otherwise
       else{
          digitalWrite(PIN_Motor_AIN_1,HIGH);
-         digitalWrite(PIN_Motor_BIN_1,LOW);
          analogWrite(PIN_Motor_PWMA,127);
-         analogWrite(PIN_Motor_PWMB,127);
       }
    }
    else {
