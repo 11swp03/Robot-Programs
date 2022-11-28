@@ -77,5 +77,5 @@ void loop(){
       digitalWrite(LightO, LOW);
 
    }
-   Serial.print(Fdistance);
+   Serial.print(middleDistance);
 }
