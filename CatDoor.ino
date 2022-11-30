@@ -61,7 +61,7 @@ void loop(){
       // closes door if distance from cat is greater than 8"
       if (middleDistance >= 10){
          analogWrite(PIN_Motor_PWMA,0);
-         analogWrite(PIN_Motor_BIN_1,0);
+         analogWrite(PIN_Motor_PWMB,0);
       }
       // opens door otherwise
       else{
