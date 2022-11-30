@@ -63,11 +63,13 @@ void loop(){
       if (middleDistance >= 10){
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,127);
+         delay (5000);
       }
       // opens door otherwise
       else{
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
+         digitalWrite(PIN_Motor_AIN_1,LOW);
          analogWrite(PIN_Motor_PWMA,127);
+         delay (5000);
       }
    }
    else {
