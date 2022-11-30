@@ -69,12 +69,12 @@ void loop(){
          digitalWrite(PIN_Motor_BIN_1,LOW);
          analogWrite(PIN_Motor_PWMA,127);
          analogWrite(PIN_Motor_PWMB,127);
-         delay (4500);
+         delay (4000);
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,127);
          analogWrite(PIN_Motor_PWMB,127);
-         delay (4500);
+         delay (4000);
       }
    }
    else {
