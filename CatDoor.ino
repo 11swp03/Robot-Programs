@@ -67,16 +67,20 @@ void loop(){
       // opens door otherwise
       else{
          digitalWrite(PIN_Motor_AIN_1,HIGH);
+         digitalWrite(PIN_Motor_BIN_1,LOW);
          analogWrite(PIN_Motor_PWMA,127);
+         analogWrite(PIN_Motor_PWMB,127);
          delay (5000);
          digitalWrite(PIN_Motor_AIN_1,LOW);
+         digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,127);
+         analogWrite(PIN_Motor_PWMB,127);
          delay (5000);
       }
    }
    else {
-      digitalWrite(PIN_Motor_AIN_1,LOW);
       analogWrite(PIN_Motor_PWMA,0);
+      analogWrite(PIN_Motor_PWMB,0);
       digitalWrite(LightO, LOW);
 
    }
