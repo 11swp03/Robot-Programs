@@ -3,8 +3,9 @@
 //defines which pins do what
 #define PIN_Motor_STBY 3
 #define PIN_Motor_PWMA 5
-#define Light1 6
+#define PIN_Motor_PWMB 6
 #define PIN_Motor_AIN_1 7
+#define PIN_Motor_BIN_1 8
 #define LightO 11
 #define BUTTON 10
 
@@ -19,9 +20,10 @@ void setup(){
 
    pinMode(PIN_Motor_PWMA, OUTPUT);
    pinMode(PIN_Motor_AIN_1, OUTPUT);
-   pinMode(Light1, OUTPUT);
-   pinMode(LightO, OUTPUT);
+   pinMode(PIN_Motor_PWMB, OUTPUT);
+   pinMode(PIN_Motor_BIN_1, OUTPUT);
    pinMode(PIN_Motor_STBY, OUTPUT);
+   pinMode(LightO, OUTPUT);
    digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
 }
 
