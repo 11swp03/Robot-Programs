@@ -61,12 +61,13 @@ void loop(){
       digitalWrite(Light1, LOW);
       // closes door if distance from cat is greater than 8"
       if (middleDistance >= 10){
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,127);
-         delay (5000);
+         analogWrite(PIN_Motor_PWMA,0);
       }
       // opens door otherwise
       else{
+         digitalWrite(PIN_Motor_AIN_1,HIGH);
+         analogWrite(PIN_Motor_PWMA,127);
+         delay (5000);
          digitalWrite(PIN_Motor_AIN_1,LOW);
          analogWrite(PIN_Motor_PWMA,127);
          delay (5000);
