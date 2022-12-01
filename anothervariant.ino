@@ -59,15 +59,15 @@ digitalWrite(PIN_Motor_AIN_1,LOW);
          digitalWrite(PIN_Motor_BIN_1,LOW);
          analogWrite(PIN_Motor_PWMA,127);
          analogWrite(PIN_Motor_PWMB,127);
-         delay (3100);
+         delay (1000);
          analogWrite(PIN_Motor_PWMA,0);
          analogWrite(PIN_Motor_PWMB,0);
-         delay (6000);
+         delay (4000);
          digitalWrite(PIN_Motor_AIN_1,HIGH);
          digitalWrite(PIN_Motor_BIN_1,HIGH);
          analogWrite(PIN_Motor_PWMA,127);
          analogWrite(PIN_Motor_PWMB,127);
-         delay (2800);
+         delay (1000);
 }
 
 void loop(){
