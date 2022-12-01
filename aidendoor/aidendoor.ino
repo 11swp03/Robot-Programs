@@ -3,8 +3,9 @@
 //defines which pins do what
 #define PIN_Motor_STBY 3
 #define PIN_Motor_PWMA 5
-#define Light1 6
+#define PIN_Motor_PWMB 6
 #define PIN_Motor_AIN_1 7
+#define PIN_Motor_BIN_1 8
 #define LightO 11
 #define BUTTON 10
 
@@ -12,16 +13,19 @@
 const int Echo = 12;
 const int Trig = 13;
 
+const int Echo2 = A1;
+const int Trig2 = A2;
+
+
 int Flag = 0;
 
 void setup(){
-   Serial.begin(9600);
-
    pinMode(PIN_Motor_PWMA, OUTPUT);
    pinMode(PIN_Motor_AIN_1, OUTPUT);
-   pinMode(Light1, OUTPUT);
-   pinMode(LightO, OUTPUT);
+   pinMode(PIN_Motor_PWMB, OUTPUT);
+   pinMode(PIN_Motor_BIN_1, OUTPUT);
    pinMode(PIN_Motor_STBY, OUTPUT);
+   pinMode(LightO, OUTPUT);
    digitalWrite(PIN_Motor_STBY,HIGH); //turns motor on
 }
 
@@ -58,26 +62,32 @@ void loop(){
 
    if (Flag == 1){
       digitalWrite(LightO, HIGH);
-      digitalWrite(Light1, LOW);
       // closes door if distance from cat is greater than 8"
       if (middleDistance >= 10){
-         digitalWrite(PIN_Motor_AIN_1,HIGH);
-         analogWrite(PIN_Motor_PWMA,127);
-         delay (5000);
+         analogWrite(PIN_Motor_PWMA,0);
+         analogWrite(PIN_Motor_PWMB,0);
       }
       // opens door otherwise
       else{
          digitalWrite(PIN_Motor_AIN_1,LOW);
+         digitalWrite(PIN_Motor_BIN_1,LOW);
          analogWrite(PIN_Motor_PWMA,127);
-         delay (5000);
+         analogWrite(PIN_Motor_PWMB,127);
+         delay (3100);
+         analogWrite(PIN_Motor_PWMA,0);
+         analogWrite(PIN_Motor_PWMB,0);
+         delay (6000);
+         digitalWrite(PIN_Motor_AIN_1,HIGH);
+         digitalWrite(PIN_Motor_BIN_1,HIGH);
+         analogWrite(PIN_Motor_PWMA,127);
+         analogWrite(PIN_Motor_PWMB,127);
+         delay (2800);
       }
    }
    else {
-      digitalWrite(PIN_Motor_AIN_1,LOW);
       analogWrite(PIN_Motor_PWMA,0);
-      digitalWrite(Light1, HIGH);
+      analogWrite(PIN_Motor_PWMB,0);
       digitalWrite(LightO, LOW);
 
    }
-   Serial.println(middleDistance);
 }
