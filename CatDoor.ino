@@ -39,8 +39,6 @@ int Distance_test(){
 
 
 void loop(){
-   //move declarations out of the loop
-
    long inches; //make floating point variable to hold distance
    pinMode(Trig, OUTPUT);//Tell Trig pin to output sound
    pinMode(Echo, INPUT);
